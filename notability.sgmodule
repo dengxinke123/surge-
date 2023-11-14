@@ -1,0 +1,10 @@
+#!name=notability
+#!desc=notability
+
+[Script]
+
+notability_8 = type=http-response, pattern=^https?:\/\/notability\.com\/(global|subscriptions), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/dengxinke123/js/main/notability.js, timeout=60, script-update-interval=0
+
+[MITM]
+
+hostname = %APPEND% notability.com
